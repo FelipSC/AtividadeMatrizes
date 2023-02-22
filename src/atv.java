@@ -4,6 +4,8 @@ public class atv {
         public static void main(String[] args) {
             Scanner teclado = new Scanner(System.in);
 
+            int somaTudo = 0;
+
             int botoes = 2;
             int camisas = 3;
             int[][] matrizBC = new int[botoes][camisas];
@@ -52,9 +54,12 @@ public class atv {
                 for (int i = 0; i < botoes; i++) {
                     for (int j = 0; j < meses; j++) {
                         System.out.print(matrizResultante[i][j] + " ");
+                        somaTudo = somaTudo + matrizResultante[i][j];
                     }
                     System.out.println("");
                 }
+                System.out.println("");
+                System.out.println(somaTudo);
             } else {
                 System.out.println("Não é pode ser concluida a multiplicação");
             }
